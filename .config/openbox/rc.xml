@@ -126,18 +126,17 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <!-- NOTE: desktops set to 1 to keep folks from accidentially switching
-       away from the installer -->
-    <number>8</number>
+    <number>9</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>Web</name>
       <name>Editor</name>
       <name>Term</name>
       <name>Files</name>
-      <name>Video</name>
-      <name>Music</name>
-      <name>Sys</name>
+      <name>Media</name>
+      <name>Games</name>
+      <name>Mon</name>
+      <name>Config</name>
       <name>Other</name>
     </names>
     <popupTime>875</popupTime>
@@ -209,109 +208,37 @@
     <keybind key="C-W-Up">
       <action name="GoToDesktop">
         <to>up</to>
-        <wrap>no</wrap>
+        <wrap>yes</wrap>
       </action>
     </keybind>
     <keybind key="C-W-Down">
       <action name="GoToDesktop">
         <to>down</to>
-        <wrap>no</wrap>
+        <wrap>yes</wrap>
       </action>
     </keybind>
-    <keybind key="S-W-Left">
+    <keybind key="W-S-Left">
       <action name="SendToDesktop">
         <to>left</to>
-        <wrap>no</wrap>
+        <wrap>yes</wrap>
       </action>
     </keybind>
-    <keybind key="S-W-Right">
+    <keybind key="W-S-Right">
       <action name="SendToDesktop">
         <to>right</to>
-        <wrap>no</wrap>
+        <wrap>yes</wrap>
       </action>
     </keybind>
-    <keybind key="S-W-Up">
+    <keybind key="W-S-Up">
       <action name="SendToDesktop">
         <to>up</to>
-        <wrap>no</wrap>
+        <wrap>yes</wrap>
       </action>
     </keybind>
-    <keybind key="S-W-Down">
+    <keybind key="W-S-Down">
       <action name="SendToDesktop">
         <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="W-S-F1">
-      <action name="SendToDesktop">
-        <to>1</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F2">
-      <action name="SendToDesktop">
-        <to>2</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F3">
-      <action name="SendToDesktop">
-        <to>3</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F4">
-      <action name="SendToDesktop">
-        <to>4</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F5">
-      <action name="SendToDesktop">
-        <to>5</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F6">
-      <action name="SendToDesktop">
-        <to>6</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F7">
-      <action name="SendToDesktop">
-        <to>7</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F8">
-      <action name="SendToDesktop">
-        <to>8</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F9">
-      <action name="SendToDesktop">
-        <to>9</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F10">
-      <action name="SendToDesktop">
-        <to>10</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F11">
-      <action name="SendToDesktop">
-        <to>11</to>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-S-F12">
-      <action name="SendToDesktop">
-        <to>12</to>
-        <follow>no</follow>
+        <wrap>yes</wrap>
       </action>
     </keybind>
     <!-- Keybindings for windows -->
@@ -370,51 +297,114 @@
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- Keybindings for windows snappings -->
-    <keybind key="W-Right">
+    <!-- Keybindings to toggle fullscreen -->
+    <keybind key="F11">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+    <!-- Keybindings for window snapping -->
+    <!-- Top-left quarter -->
+    <keybind key="W-1">
       <action name="Unmaximize">
-        <direction>horizontal</direction>
-      </action>
-      <action name="Maximize">
-        <direction>vertical</direction>
+        <direction>both</direction>
       </action>
       <action name="Raise"/>
       <action name="MoveResizeTo">
+        <height>50%</height>
+        <width>50%</width>
+        <x>0</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <!-- Top-right quarter -->
+    <keybind key="W-2">
+      <action name="Unmaximize">
+        <direction>both</direction>
+      </action>
+      <action name="Raise"/>
+      <action name="MoveResizeTo">
+        <height>50%</height>
         <width>50%</width>
         <x>50%</x>
         <y>0</y>
       </action>
     </keybind>
+    <!-- Bottom-left quarter -->
+    <keybind key="W-3">
+      <action name="Unmaximize">
+        <direction>both</direction>
+      </action>
+      <action name="Raise"/>
+      <action name="MoveResizeTo">
+        <height>50%</height>
+        <width>50%</width>
+        <x>0</x>
+        <y>50%</y>
+      </action>
+    </keybind>
+    <!-- Bottom-right quarter -->
+    <keybind key="W-4">
+      <action name="Unmaximize">
+        <direction>both</direction>
+      </action>
+      <action name="Raise"/>
+      <action name="MoveResizeTo">
+        <height>50%</height>
+        <width>50%</width>
+        <x>50%</x>
+        <y>50%</y>
+      </action>
+    </keybind>
+    <!-- Maximize -->
+    <keybind key="W-Up">
+      <action name="Raise"/>
+      <action name="Maximize">
+        <direction>both</direction>
+      </action>
+    </keybind>
+    <!-- Unmaximize -->
+    <keybind key="W-Down">
+      <action name="Raise"/>
+      <action name="Unmaximize">
+        <direction>both</direction>
+      </action>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+      </action>
+    </keybind>
+    <!-- Left half -->
     <keybind key="W-Left">
+      <action name="Raise"/>
       <action name="Unmaximize">
         <direction>horizontal</direction>
       </action>
       <action name="Maximize">
         <direction>vertical</direction>
       </action>
-      <action name="Raise"/>
       <action name="MoveResizeTo">
         <width>50%</width>
         <x>0</x>
         <y>0</y>
       </action>
     </keybind>
-    <keybind key="W-Up">
-      <action name="Maximize"/>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="Unmaximize">
-        <direction>both</direction>
-      </action>
+    <!-- Right half -->
+    <keybind key="W-Right">
       <action name="Raise"/>
+      <action name="Unmaximize">
+        <direction>horizontal</direction>
+      </action>
+      <action name="Maximize">
+        <direction>vertical</direction>
+      </action>
       <action name="MoveResizeTo">
-        <x>center</x>
-        <y>center</y>
+        <width>50%</width>
+        <x>50%</x>
+        <y>0</y>
       </action>
     </keybind>
-    <!-- Keybindings to toggle fullscreen -->
-    <keybind key="F11">
-      <action name="ToggleFullscreen"/>
+    <!-- ToggleDecorations -->
+    <keybind key="W-u">
+      <action name="ToggleDecorations"/>
     </keybind>
   </keyboard>
   <mouse>
@@ -891,18 +881,16 @@
         Focus all applications launched
         Usefull when launching applications, like terminal from pcmanfm
   -->
-    <application class="*">
-      <focus>yes</focus>
+    <application name="firmware-updater">
+      <decor>no</decor>
     </application>
     <application class="firefox">
-      <desktop>1</desktop>
       <decor>no</decor>
+      <desktop>1</desktop>
       <maximized>yes</maximized>
     </application>
-    <application class="vlc">
-      <desktop>5</desktop>
-      <decor>yes</decor>
-      <maximized>yes</maximized>
+    <application class="*">
+      <focus>yes</focus>
     </application>
   </applications>
 </openbox_config>
