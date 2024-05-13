@@ -48,7 +48,7 @@
   <theme>
     <!--  Lubuntu specific : Theme = Lubuntu and font = Ubuntu
   -->
-    <name>Lubuntu Arc</name>
+    <name>Lubuntu Breeze</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
     available characters are NDSLIMC, each can occur at most once.
@@ -63,57 +63,57 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Ubuntu Medium</name>
+      <name>SauceCodePro NF</name>
       <size>11</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Ubuntu Medium</name>
+      <name>SauceCodePro NF</name>
       <size>11</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Ubuntu</name>
+      <name>SauceCodePro NF</name>
       <size>11</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Ubuntu</name>
+      <name>SauceCodePro NF</name>
       <size>11</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Ubuntu Medium</name>
+      <name>SauceCodePro NF</name>
       <size>11</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Ubuntu Medium</name>
+      <name>SauceCodePro NF</name>
       <size>11</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
@@ -131,12 +131,12 @@
     <names>
       <name>Web</name>
       <name>Editor</name>
-      <name>Term</name>
+      <name>Terminal</name>
       <name>Files</name>
       <name>Media</name>
       <name>Games</name>
-      <name>Mon</name>
-      <name>Config</name>
+      <name>Monitoring</name>
+      <name>Configuretion</name>
       <name>Other</name>
     </names>
     <popupTime>875</popupTime>
@@ -239,6 +239,16 @@
       <action name="SendToDesktop">
         <to>down</to>
         <wrap>yes</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-equal">
+      <action name="AddDesktop">
+        <where>last</where>
+      </action>
+    </keybind>
+    <keybind key="W-minus">
+      <action name="RemoveDesktop">
+        <where>current</where>
       </action>
     </keybind>
     <!-- Keybindings for windows -->
@@ -432,7 +442,15 @@
       <mousebind button="A-Left" action="Click">
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Left" action="Drag">
+      <mousebind button="W-Right" action="Click">
+        <action name="ShowMenu">
+          <menu>client-menu</menu>
+        </action>
+      </mousebind>
+      <mousebind button="W-Middle" action="Click">
+        <action name="Close"/>
+      </mousebind>
+      <mousebind button="W-Left" action="Drag">
         <action name="Move"/>
       </mousebind>
       <mousebind button="A-Right" action="Press">
@@ -440,7 +458,7 @@
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Right" action="Drag">
+      <mousebind button="W-Right" action="Drag">
         <action name="Resize"/>
       </mousebind>
       <mousebind button="A-Middle" action="Press">
@@ -891,6 +909,7 @@
     </application>
     <application class="*">
       <focus>yes</focus>
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>
