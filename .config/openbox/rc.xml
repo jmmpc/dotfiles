@@ -136,7 +136,7 @@
       <name>Media</name>
       <name>Games</name>
       <name>Monitoring</name>
-      <name>Configuretion</name>
+      <name>Configuration</name>
       <name>Other</name>
     </names>
     <popupTime>875</popupTime>
@@ -255,7 +255,7 @@
     <keybind key="W-q">
       <action name="Close"/>
     </keybind>
-    <keybind key="A-Escape">
+    <keybind key="W-Escape">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
