@@ -126,18 +126,18 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>9</number>
+    <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>Web</name>
-      <name>Editor</name>
-      <name>Terminal</name>
-      <name>Files</name>
-      <name>Media</name>
-      <name>Games</name>
-      <name>Monitoring</name>
-      <name>Configuration</name>
-      <name>Other</name>
+      <name>desktop 1</name>
+      <name>desktop 2</name>
+      <name>desktop 3</name>
+      <name>desktop 4</name>
+      <name>desktop 5</name>
+      <name>desktop 6</name>
+      <name>desktop 7</name>
+      <name>desktop 8</name>
+      <name>desktop 9</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -192,60 +192,66 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <!-- Reconfigure -->
+    <keybind key="C-W-F12">
+      <action name="Reconfigure"/>
+    </keybind>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-W-Left">
       <action name="GoToDesktop">
         <to>left</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="C-W-Right">
       <action name="GoToDesktop">
         <to>right</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="C-W-Up">
       <action name="GoToDesktop">
         <to>up</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="C-W-Down">
       <action name="GoToDesktop">
         <to>down</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="W-S-Left">
       <action name="SendToDesktop">
         <to>left</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="W-S-Right">
       <action name="SendToDesktop">
         <to>right</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="W-S-Up">
       <action name="SendToDesktop">
         <to>up</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="W-S-Down">
       <action name="SendToDesktop">
         <to>down</to>
-        <wrap>yes</wrap>
+        <wrap>no</wrap>
       </action>
     </keybind>
+    <!-- Add desktop to the end -->
     <keybind key="W-equal">
       <action name="AddDesktop">
         <where>last</where>
       </action>
     </keybind>
+    <!-- Remove current desktop -->
     <keybind key="W-minus">
       <action name="RemoveDesktop">
         <where>current</where>
@@ -288,22 +294,22 @@
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="A-W-Right">
-      <action name="DirectionalCycleWindows">
+      <action name="DirectionalTargetWindow">
         <direction>right</direction>
       </action>
     </keybind>
     <keybind key="A-W-Left">
-      <action name="DirectionalCycleWindows">
+      <action name="DirectionalTargetWindow">
         <direction>left</direction>
       </action>
     </keybind>
     <keybind key="A-W-Up">
-      <action name="DirectionalCycleWindows">
+      <action name="DirectionalTargetWindow">
         <direction>up</direction>
       </action>
     </keybind>
     <keybind key="A-W-Down">
-      <action name="DirectionalCycleWindows">
+      <action name="DirectionalTargetWindow">
         <direction>down</direction>
       </action>
     </keybind>
