@@ -422,7 +422,14 @@
     <keybind key="W-u">
       <action name="ToggleDecorations"/>
     </keybind>
+    <!-- Show root menu -->
+    <keybind key="W-w">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
   </keyboard>
+
   <mouse>
     <!--
       Lubuntu specific : Specific mouse settings
