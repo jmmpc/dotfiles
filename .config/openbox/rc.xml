@@ -916,7 +916,7 @@
     </application>
     <application class="*">
       <focus>yes</focus>
-      <decor>no</decor>
+      <!-- <decor>no</decor> -->
     </application>
   </applications>
 </openbox_config>
