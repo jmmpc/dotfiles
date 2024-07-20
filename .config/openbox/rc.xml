@@ -293,22 +293,22 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="A-W-Right">
+    <keybind key="W-Right">
       <action name="DirectionalTargetWindow">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="A-W-Left">
+    <keybind key="W-Left">
       <action name="DirectionalTargetWindow">
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="A-W-Up">
+    <keybind key="W-Up">
       <action name="DirectionalTargetWindow">
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="A-W-Down">
+    <keybind key="W-Down">
       <action name="DirectionalTargetWindow">
         <direction>down</direction>
       </action>
@@ -319,7 +319,7 @@
     </keybind>
     <!-- Keybindings for window snapping -->
     <!-- Top-left quarter -->
-    <keybind key="W-1">
+    <keybind key="A-W-1">
       <action name="Unmaximize">
         <direction>both</direction>
       </action>
@@ -332,7 +332,7 @@
       </action>
     </keybind>
     <!-- Top-right quarter -->
-    <keybind key="W-2">
+    <keybind key="A-W-2">
       <action name="Unmaximize">
         <direction>both</direction>
       </action>
@@ -345,7 +345,7 @@
       </action>
     </keybind>
     <!-- Bottom-left quarter -->
-    <keybind key="W-3">
+    <keybind key="A-W-3">
       <action name="Unmaximize">
         <direction>both</direction>
       </action>
@@ -358,7 +358,7 @@
       </action>
     </keybind>
     <!-- Bottom-right quarter -->
-    <keybind key="W-4">
+    <keybind key="A-W-4">
       <action name="Unmaximize">
         <direction>both</direction>
       </action>
@@ -371,14 +371,14 @@
       </action>
     </keybind>
     <!-- Maximize -->
-    <keybind key="W-Up">
+    <keybind key="A-W-Up">
       <action name="Raise"/>
       <action name="Maximize">
         <direction>both</direction>
       </action>
     </keybind>
     <!-- Unmaximize -->
-    <keybind key="W-Down">
+    <keybind key="A-W-Down">
       <action name="Raise"/>
       <action name="Unmaximize">
         <direction>both</direction>
@@ -389,7 +389,7 @@
       </action>
     </keybind>
     <!-- Left half -->
-    <keybind key="W-Left">
+    <keybind key="A-W-Left">
       <action name="Raise"/>
       <action name="Unmaximize">
         <direction>horizontal</direction>
@@ -404,7 +404,7 @@
       </action>
     </keybind>
     <!-- Right half -->
-    <keybind key="W-Right">
+    <keybind key="A-W-Right">
       <action name="Raise"/>
       <action name="Unmaximize">
         <direction>horizontal</direction>
@@ -917,6 +917,9 @@
     <application class="*">
       <focus>yes</focus>
       <!-- <decor>no</decor> -->
+    </application>
+    <application class="firefox">
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>
