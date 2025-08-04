@@ -1,5 +1,22 @@
+[language-server.gopls.config]
+gofumpt = true
+
 [[language]]
 name = "go"
 auto-format = true
 formatter = { command = "goimports" }
-indent = { tab-width = 8, unit = "\t" }
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html", "--single-attribute-per-line", "--bracket-same-line"] }
+auto-format = true
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+auto-format = true
+
+[[language]]
+name = "scss"
+formatter = { command = 'prettier', args = ["--parser", "scss"] }
+auto-format = true
