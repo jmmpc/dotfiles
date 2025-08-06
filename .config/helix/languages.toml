@@ -5,6 +5,7 @@ gofumpt = true
 name = "go"
 auto-format = true
 formatter = { command = "goimports" }
+indent = { tab-width = 8, unit = "\t"}
 
 [[language]]
 name = "html"
